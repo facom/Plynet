@@ -1,6 +1,6 @@
 PLYNET
 ======
-Python Planetary Physics Package
+**Python Planetary Physics Package**
 
 
 DESCRIPTION:
