@@ -1,13 +1,23 @@
 PLYNET
+======
 Python Planetary Physics Package
-================================================================================
 
-User Installation (Read-Only version)
-................................................................................
-Download the tarball of the package from GitHub:
 
-   https://github.com/sbustamante/Plynet/tarball/master
-................................................................................
+DESCRIPTION:
+------------
+Plynet is a open source and object-oriented code in python to calculate physical 
+properties of rocky planets. The aim of this proyect is to compile in just one code 
+several algorithms commonly used in planetary sciences to compute mechanical, thermal 
+and magnetic properties of planets. We make use of the OOP paradigm to make a versatile 
+code that allows to work with many planets (grid) at time unlike the current private 
+existing codes.
+
+
+
+USER INSTALLATION (Read-Only version):
+--------------------------------------
+Download the zip file of Plynet in GitHub from [here.](https://github.com/sbustamante/Plynet/archive/master.zip)
+
 
 
 Developer Installation (Read-Write version)
