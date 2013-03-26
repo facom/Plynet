@@ -57,9 +57,7 @@ you can get a read-write version of *Plynet*
 6.  *(Optional)* If you want to push your changes in master branch of repository
 
         $ git add <files>
-
         $ git commit -m 'commit message'
-
         $ git push -u origin master
 
 
