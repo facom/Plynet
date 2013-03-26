@@ -3,10 +3,8 @@ PLYNET
 **Python Planetary Physics Package**
 
 
-
-
 DESCRIPTION:
-------------
+-----------------------------------------------------------------------------------------
 *Plynet* is a open source and object-oriented code in python to calculate physical 
 properties of rocky planets. The aim of this proyect is to compile in just one code 
 several algorithms commonly used in planetary sciences to compute mechanical, thermal 
@@ -15,18 +13,14 @@ code that allows to work with many planets (grid) at time unlike the current pri
 existing codes.
 
 
-
-
-USER INSTALLATION (Read-Only version):
---------------------------------------
+USER VERSION (Read-Only version):
+-----------------------------------------------------------------------------------------
 Download the zip file of Plynet in GitHub from 
 [here.](https://github.com/sbustamante/Plynet/archive/master.zip)
 
 
-
-
-DEVELOPER INSTALLATION (Read-Write version):
---------------------------------------------
+DEVELOPER VERSION (Read-Write version):
+-----------------------------------------------------------------------------------------
 Plynet is a open source code, thus you can contribuite with us. With the next steps 
 you can get a read-write version of *Plynet*
 
@@ -61,10 +55,8 @@ you can get a read-write version of *Plynet*
         $ git push -u origin master
 
 
-
-
 PACKAGE INSTALLATION:
----------------------
+-----------------------------------------------------------------------------------------
 Once you had get a (user or developer) copy of Plynet, to install it perform the 
 following operations:
 
@@ -82,24 +74,26 @@ following operations:
    
         $ make install
 
-The installation ends with the command "python -c'import plynet'".  If
-you don't see this command at the end of the last command, see if any
-language error has arosen.
+* The installation ends with the command `"python -c'import plynet'"`.  If
+  you don't see this command at the end of the last command, see if any
+  language error has arosen.
 
-Otherwise if the command is executed but it show errors like:
+* Otherwise if the command is executed but it show errors like:
 
 To test all the package:
    
-   make test
+    $ make test
 
 To test a given module executes:
 
-   make test<module>
+    $ make test<module>
 
 To clean all the package
 
-   make clean
+    $ make clean
 
---------------------------------------------------------------------------------
-Instituto de Fisica - FCEN - Universidad de Antioquia
-(C) 2011 - Jorge Zuluaga, Sebastian Bustamante, Pablo Cuartas
+-----------------------------------------------------------------------------------------
+Instituto de Fisica - FCEN - Universidad de Antioquia (C) 2013
+Sebastian Bustamante			macsebas33@gmail.com
+Jorge Zuluaga
+Pablo Cuartas
