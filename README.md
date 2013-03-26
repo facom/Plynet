@@ -33,32 +33,34 @@ you can get a read-write version of *Plynet*
 
 1.  Create the *Plynet* folder for your personal copy of the code.
 
-    $ mkdir Plynet
+        $ mkdir Plynet
 
 2.  Initialize your local git repository
 
-    $ git init
+        $ git init
 
 3.  Link with the github proyect
 
-    $ git remote add origin git@github.com:sbustamante/Plynet.git
+        $ git remote add origin git@github.com:sbustamante/Plynet.git
 
 4.  Pull the proyect in your local copy
 
-    $ git pull
+        $ git pull
 
 5.  Finally, link with 'master' branch
 
-    $ git push -u origin master
+        $ git push -u origin master
 
     *In this step is necessary create a personal ssh key, for this, the user 
     must add a new associated email direction, view github user-help*
 
 6.  *(Optional)* If you want to push your changes in master branch of repository
 
-    $ git add <files>
-    $ git commit -m 'commit message'
-    $ git push -u origin master
+        $ git add <files>
+
+        $ git commit -m 'commit message'
+
+        $ git push -u origin master
 
 
 
@@ -70,17 +72,17 @@ following operations:
 
 1.  Create the directory usr/local in your home directory:
    
-    $ mkdir -p $HOME/usr/local
+        $ mkdir -p $HOME/usr/local
 
 2.  Add the following line to your .bashrc:
 
-    $ export PYTHONPATH=$PYTHONPATH:$HOME/usr/lib/python2.6/site-packages
+        $ export PYTHONPATH=$PYTHONPATH:$HOME/usr/lib/python2.6/site-packages
 
     *Steps 1 and 2 must be followed only the first time your install.*
 
 3.  Executes:
    
-   make install
+        $ make install
 
 The installation ends with the command "python -c'import plynet'".  If
 you don't see this command at the end of the last command, see if any
