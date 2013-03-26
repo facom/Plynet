@@ -1,9 +1,8 @@
 #####################################################################
-# PLYNET, http://sourceforge.net/projects/plynet
+# PLYNET, https://github.com/sbustamante/Plynet/archive/master.zip
 #####################################################################
 #
-# Copyright (C) 2010 Jorge I. Zuluaga, C. Hincapie, S. Bustamante,
-# N. Mateus, P.A. Cuartas
+# Copyright (C) 2013 S. Bustamante, Jorge I. Zuluaga
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the Academic Free License (AFL) version 3.0.
@@ -15,6 +14,7 @@
 # You should have received a copy of the Academic Free License along
 # with this program; if not an online version is available at
 # http://www.opensource.org/licenses/afl-3.0.php
+#
 #####################################################################
 # EXAMPLES MAKEFILE
 #####################################################################
