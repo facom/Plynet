@@ -6,7 +6,7 @@ PLYNET
 2.  [USER VERSION (Read-Only version)](https://github.com/sbustamante/Plynet#user-version-read-only-version)
 3.  [DEVELOPER VERSION (Read-Write version)](https://github.com/sbustamante/Plynet#developer-version-read-write-version)
 4.  [PACKAGE INSTALLATION](https://github.com/sbustamante/Plynet#package-installation)
-
+5.  [LICENSE](https://github.com/sbustamante/Plynet#license)
 
 
 DESCRIPTION:
@@ -97,6 +97,18 @@ To test a given module executes:
 To clean all the package
 
     $ make clean
+
+
+LICENSE:
+-----------------------------------------------------------------------------------------
+This program is free software; you can redistribute it and/or modify it under the terms 
+of the Academic Free License (AFL) version 3.0.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+
+You should have received a copy of the Academic Free License along with this program; if 
+not an online version is available [here.](http://www.opensource.org/licenses/afl-3.0.php)
 
 
 -----------------------------------------------------------------------------------------
