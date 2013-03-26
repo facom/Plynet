@@ -92,8 +92,9 @@ To clean all the package
 
     $ make clean
 
+
 -----------------------------------------------------------------------------------------
-Instituto de Fisica - FCEN - Universidad de Antioquia (C) 2013
+**Instituto de Fisica - FCEN - Universidad de Antioquia (C) 2013**
 
 Sebastian Bustamante			macsebas33@gmail.com
 
