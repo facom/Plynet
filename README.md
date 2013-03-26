@@ -11,7 +11,7 @@ PLYNET
 
 DESCRIPTION:
 -----------------------------------------------------------------------------------------
-*Plynet* is a open source and object-oriented code in python to calculate physical 
+*Plynet* is a free and object-oriented code in python to calculate physical 
 properties of rocky planets. The aim of this proyect is to compile in just one code 
 several algorithms commonly used in planetary sciences to compute mechanical, thermal 
 and magnetic properties of planets. We make use of the OOP paradigm to make a versatile 
