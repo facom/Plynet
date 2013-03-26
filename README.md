@@ -102,4 +102,4 @@ To clean all the package
 -----------------------------------------------------------------------------------------
 **Instituto de Fisica - FCEN - Universidad de Antioquia (C) 2013**
 
-Sebastian Bustamante (macsebas33@gmail.com), Jorge Zuluaga, Pablo Cuartas
+Sebastian Bustamante (macsebas33@gmail.com), Jorge Zuluaga
