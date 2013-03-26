@@ -3,9 +3,11 @@ PLYNET
 **Python Planetary Physics Package**
 
 
+
+
 DESCRIPTION:
 ------------
-Plynet is a open source and object-oriented code in python to calculate physical 
+*Plynet* is a open source and object-oriented code in python to calculate physical 
 properties of rocky planets. The aim of this proyect is to compile in just one code 
 several algorithms commonly used in planetary sciences to compute mechanical, thermal 
 and magnetic properties of planets. We make use of the OOP paradigm to make a versatile 
@@ -14,54 +16,69 @@ existing codes.
 
 
 
+
 USER INSTALLATION (Read-Only version):
 --------------------------------------
-Download the zip file of Plynet in GitHub from [here.](https://github.com/sbustamante/Plynet/archive/master.zip)
+Download the zip file of Plynet in GitHub from 
+[here.](https://github.com/sbustamante/Plynet/archive/master.zip)
 
 
 
-Developer Installation (Read-Write version)
-................................................................................
-Download the tarball of the package from GitHub:
 
-   https://github.com/sbustamante/Plynet/tarball/master
-
-Initialize git version
-
-   $ git init
-
-Link the git proyect
-
-   $ git remote add origin git@github.com:facomdev/PLYNET.git
-
-Link with 'master' branch
-
-   $ git push -u origin master
-
-[ In this step is necessary create a personal ssh key, for this, the user 
-must add a new associated email direction, view github user-help ]
-
-For commit
-
-   $ git add <files>
-   $ git commit -m 'commit message'
-   $ git push -u origin master
-................................................................................
+DEVELOPER INSTALLATION (Read-Write version):
+--------------------------------------------
+Plynet is a open source code, thus you can contribuite with us. With the next steps 
+you can get a read-write version of *Plynet*
 
 
-To install package perform the following operations:
+1.  Create the *Plynet* folder for your personal copy of the code.
 
-1) Create the directory usr/local in your home directory:
+    $ mkdir Plynet
+
+2.  Initialize your local git repository
+
+    $ git init
+
+3.  Link with the github proyect
+
+    $ git remote add origin git@github.com:sbustamante/Plynet.git
+
+4.  Pull the proyect in your local copy
+
+    $ git pull
+
+5.  Finally, link with 'master' branch
+
+    $ git push -u origin master
+
+    *In this step is necessary create a personal ssh key, for this, the user 
+    must add a new associated email direction, view github user-help*
+
+6.  *(Optional)* If you want to push your changes in master branch of repository
+
+    $ git add <files>
+    $ git commit -m 'commit message'
+    $ git push -u origin master
+
+
+
+
+PACKAGE INSTALLATION:
+---------------------
+Once you had get a (user or developer) copy of Plynet, to install it perform the 
+following operations:
+
+1.  Create the directory usr/local in your home directory:
    
-   mkdir -p $HOME/usr/local
+    $ mkdir -p $HOME/usr/local
 
-2) Add the following line to your .bashrc:
+2.  Add the following line to your .bashrc:
 
-   export PYTHONPATH=$PYTHONPATH:$HOME/usr/lib/python2.6/site-packages
+    $ export PYTHONPATH=$PYTHONPATH:$HOME/usr/lib/python2.6/site-packages
 
-Steps 1 and 2 must be followed only the first time your install.
+    *Steps 1 and 2 must be followed only the first time your install.*
 
-3) Executes:
+3.  Executes:
    
    make install
 
