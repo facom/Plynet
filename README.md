@@ -2,11 +2,16 @@ PLYNET
 ======
 **Python Planetary Physics Package**
 
-1.  [DESCRIPTION](https://github.com/sbustamante/Plynet#description)
-2.  [USER VERSION (Read-Only version)](https://github.com/sbustamante/Plynet#user-version-read-only-version)
-3.  [DEVELOPER VERSION (Read-Write version)](https://github.com/sbustamante/Plynet#developer-version-read-write-version)
-4.  [PACKAGE INSTALLATION](https://github.com/sbustamante/Plynet#package-installation)
-5.  [LICENSE](https://github.com/sbustamante/Plynet#license)
+1.  [DESCRIPTION]
+    (https://github.com/sbustamante/Plynet#description)
+2.  [USER VERSION (Read-Only version)]
+    (https://github.com/sbustamante/Plynet#user-version-read-only-version)
+3.  [DEVELOPER VERSION (Read-Write version)]
+    (https://github.com/sbustamante/Plynet#developer-version-read-write-version)
+4.  [PACKAGE INSTALLATION]
+    (https://github.com/sbustamante/Plynet#package-installation)
+5.  [LICENSE]
+    (https://github.com/sbustamante/Plynet#license)
 
 
 DESCRIPTION:
@@ -51,8 +56,10 @@ you can get a read-write version of *Plynet*
 
         $ git push -u origin master
 
-    *In this step is necessary create a personal ssh key, for this, the user 
-    must add a new associated email direction, view github user-help*
+    *Before this step, the user must request to macsebas33@gmail.com to be
+    added as collaborator of Plynet*
+    *In this step is also necessary create a personal ssh key, for this, the user 
+    must add a new associated email direction, view github [user-help](https://help.github.com/)*
 
 6.  *(Optional)* If you want to push your changes in master branch of repository
 
