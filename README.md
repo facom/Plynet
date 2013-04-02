@@ -110,7 +110,7 @@ VERSION HISTORY:
 -----------------------------------------------------------------------------------------
 * Plynet 1.0-release:
 
-  *-Principal features-*
+  **Principal features**
   * 
 
 
