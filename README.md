@@ -3,17 +3,17 @@ PLYNET 1.0-release
 **Python Planetary Physics Package**
 
 1.  [DESCRIPTION]
-    (https://github.com/sbustamante/Plynet#description)
+    (https://github.com/sbustamante/Plynet1.0-relaease#description)
 2.  [USER VERSION (Read-Only version)]
-    (https://github.com/sbustamante/Plynet#user-version-read-only-version)
+    (https://github.com/sbustamante/Plynet1.0-relaease#user-version-read-only-version)
 3.  [DEVELOPER VERSION (Read-Write version)]
-    (https://github.com/sbustamante/Plynet#developer-version-read-write-version)
+    (https://github.com/sbustamante/Plynet1.0-relaease#developer-version-read-write-version)
 4.  [PACKAGE INSTALLATION]
-    (https://github.com/sbustamante/Plynet#package-installation)
+    (https://github.com/sbustamante/Plynet1.0-relaease#package-installation)
 5.  [VERSION HISTORY]
-    (https://github.com/sbustamante/Plynet#version-history)
+    (https://github.com/sbustamante/Plynet1.0-relaease#version-history)
 6.  [LICENSE]
-    (https://github.com/sbustamante/Plynet#license)
+    (https://github.com/sbustamante/Plynet1.0-relaease#license)
 
 
 DESCRIPTION:
