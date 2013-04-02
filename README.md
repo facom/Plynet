@@ -106,6 +106,13 @@ To clean all the package
     $ make clean
 
 
+VERSION HISTORY:
+-----------------------------------------------------------------------------------------
+* Plynet 1.0-release:
+  *Principal features*
+  * 
+
+
 LICENSE:
 -----------------------------------------------------------------------------------------
 This program is free software; you can redistribute it and/or modify it under the terms 
