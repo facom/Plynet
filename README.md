@@ -1,4 +1,4 @@
-PLYNET 1.0-release
+PLYNET 2.0
 ==================
 **Python Planetary Physics Package**
 
