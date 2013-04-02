@@ -111,7 +111,14 @@ VERSION HISTORY:
 * Plynet 1.0-release:
 
   **Principal features**
-  * 
+  * A code with a completely oriented object structure. 
+  * The class planet contains principal physical profile to work with rocky planetary
+  interiors.
+  * Different methods in class planet to load and save the physical profiles, allowing to 
+  load precalculate planet interiors, like the PREM in the case of the earth, and saving
+  the computed profiles.
+  * Three integration schemes to compute the differential equation system of the planetary
+  interior. RK4, Euler and the odestep functionality of scipy library.
 
 
 LICENSE:
