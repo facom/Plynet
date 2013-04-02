@@ -10,7 +10,9 @@ PLYNET 1.0-release
     (https://github.com/sbustamante/Plynet#developer-version-read-write-version)
 4.  [PACKAGE INSTALLATION]
     (https://github.com/sbustamante/Plynet#package-installation)
-5.  [LICENSE]
+5.  [VERSION HISTORY]
+    (https://github.com/sbustamante/Plynet#version-history)
+6.  [LICENSE]
     (https://github.com/sbustamante/Plynet#license)
 
 
