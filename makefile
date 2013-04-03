@@ -23,6 +23,8 @@ PYTHON 		=	python2.6
 INSTALL_DIR	=	$(HOME)/usr
 PACKAGE_DIR	=	$(INSTALL_DIR)/lib/$(PYTHON)/site-packages/$(PACKAGE)
 TEST_CMD	=	nosetests $(TEST_OPT) --with-doctest --doctest-tests
+EDITOR		=	kate
+
 
 install:
 	$(PYTHON) setup.py install --prefix=$(INSTALL_DIR)
@@ -32,10 +34,7 @@ gendist:
 	$(PYTHON) setup.py sdist
 
 edit:
-	emacs -nw Project plynet/*.py plynet/conf/*rc.py 
-
-editkate:
-	kate plynet/*.py plynet/conf/*rc.py &
+	$(EDITOR) plynet/*.py plynet/conf/*rc.py 
 
 clean:
 	find . -name *~ -exec rm -rf {} \;
