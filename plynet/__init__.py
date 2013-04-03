@@ -215,4 +215,4 @@ def verbose(msg,out=sys.stderr,level=1):
     if config.verbose>=level:
         print >>out,msg
 
-import data, mechanic, thermal, magnetic, numeric
+import data, mechanic, numeric

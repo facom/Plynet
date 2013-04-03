@@ -29,7 +29,7 @@ existing codes.
 USER VERSION (Read-Only version):
 -----------------------------------------------------------------------------------------
 Download the zip file of Plynet in GitHub from 
-[here.](https://github.com/sbustamante/Plynet/archive/master.zip)
+[here.](https://github.com/sbustamante/Plynet/archive/1.0-release.zip)
 
 
 DEVELOPER VERSION (Read-Write version):
@@ -119,8 +119,13 @@ VERSION HISTORY:
   * Different methods in class planet to load and save the physical profiles, allowing to 
   load precalculate planet interiors, like the PREM in the case of the earth, and saving
   the computed profiles.
-  * Three integration schemes to compute the differential equation system of the planetary
-  interior. RK4, Euler and the odestep functionality of scipy library.
+  * Three integration schemes to compute the differential equation system of the 
+  planetary interior. RK4, Euler and the odestep functionality of scipy library.
+  * Two common used equations of state for solids, the Vinet equation and the Birch 
+  Murnaghan of third order (BM3). Each one with a set of parameters for different 
+  materials present in the interior planets.
+  * A n-section shooting method to find the planet radius in the equation system for 
+  interior.
 
 
 LICENSE:

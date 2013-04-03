@@ -13,8 +13,6 @@ from plynet import *
 #		MODULE COMPATIBILITY
 #========================================================================================
 from plynet.mechanic  import *
-from plynet.thermal   import *
-from plynet.magnetic  import *
 from plynet.numeric   import *
 
 #========================================================================================

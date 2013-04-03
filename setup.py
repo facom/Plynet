@@ -18,7 +18,7 @@ from distutils.extension import Extension
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 setup(
   name        = 'plynet',
-  version     = 'alpha-1.0',
+  version     = '1.0-release',
   description = 'Python Planetary Physics Package',
   packages    = ['plynet','plynet.conf'],
 )

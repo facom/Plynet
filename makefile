@@ -18,17 +18,18 @@
 #####################################################################
 # PROJECT MAKEFILE
 #####################################################################
-PACKAGE=plynet
-INSTALL_DIR=$(HOME)/usr
-PACKAGE_DIR=$(INSTALL_DIR)/lib/python2.6/site-packages/$(PACKAGE)
-TEST_CMD=nosetests $(TEST_OPT) --with-doctest --doctest-tests
+PACKAGE		=	plynet
+PYTHON 		=	python2.6 
+INSTALL_DIR	=	$(HOME)/usr
+PACKAGE_DIR	=	$(INSTALL_DIR)/lib/$(PYTHON)/site-packages/$(PACKAGE)
+TEST_CMD	=	nosetests $(TEST_OPT) --with-doctest --doctest-tests
 
 install:
-	python setup.py install --prefix=$(INSTALL_DIR)
-	python -c"import plynet"
+	$(PYTHON) setup.py install --prefix=$(INSTALL_DIR)
+	$(PYTHON) -c"import plynet"
 
 gendist:
-	python setup.py sdist
+	$(PYTHON) setup.py sdist
 
 edit:
 	emacs -nw Project plynet/*.py plynet/conf/*rc.py 
@@ -46,9 +47,9 @@ cleanall:clean
 	rm -rf tmp/*
 	rm -rf $(PACKAGE_DIR)
 
-testall:test testdata testnumeric testthermal testmagnetic testmechanic
+testall:test testdata testnumeric testmechanic
 
-test:test$(PACKAGE) testdata testnumeric testthermal testmagnetic testmechanic
+test:test$(PACKAGE) testdata testnumeric testmechanic
 
 test$(PACKAGE):
 	$(TEST_CMD) $(PACKAGE)
@@ -58,12 +59,6 @@ testdata:
 
 testnumeric:
 	$(TEST_CMD) $(PACKAGE).numeric
-
-testthermal:
-	$(TEST_CMD) $(PACKAGE).thermal
-
-testmagnetic:
-	$(TEST_CMD) $(PACKAGE).magnetic
 
 testmechanics:
 	$(TEST_CMD) $(PACKAGE).mechanic
