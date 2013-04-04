@@ -95,10 +95,6 @@ following operations:
 
 * Otherwise if the command is executed but it show errors like:
 
-To generate doxygen html documentation:
-
-    $ make documentation
-
 To test all the package:
    
     $ make test
