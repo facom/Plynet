@@ -25,10 +25,14 @@ INSTALL_DIR	=	$(HOME)/usr
 PACKAGE_DIR	=	$(INSTALL_DIR)/lib/$(PYTHON)/site-packages/$(PACKAGE)
 TEST_CMD	=	nosetests $(TEST_OPT) --with-doctest --doctest-tests
 EDITOR		=	kate
+DOC_DIR		=	./doc
 
 install:
 	$(PYTHON) setup.py install --prefix=$(INSTALL_DIR)
 	$(PYTHON) -c"import plynet"
+
+documentation:
+	doxygen $(DOC_DIR)/config.dox
 
 gendist:
 	$(PYTHON) setup.py sdist
@@ -45,7 +49,6 @@ cleanall:clean
 	rm -rf build
 	rm -rf tmp/*
 	rm -rf $(PACKAGE_DIR)
-	rm -rf $(DOC_DIR)/html
 
 testall:test testdata testnumeric testmechanic
 
@@ -65,6 +68,7 @@ help:
 	@echo -e '\tmake install\t\tinstall $(PACKAGE) $(VERSION)'
 	@echo -e '\tmake help\t\tthis help'
 	@echo -e '\tmake version\t\tcurrent $(PACKAGE) version'
+	@echo -e '\tmake documentation\tgenerate the doxygen documentation'
 	@echo -e '\tmake edit\t\tedit the code with $(EDITOR)'
 
 version:
