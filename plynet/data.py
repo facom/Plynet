@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+#########################################################################################
 #	DATA MODULE
-#oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+#########################################################################################
 
 #========================================================================================
 #		IMPORTS
 #========================================================================================
 from plynet import *
+
 
 #========================================================================================
 #		MODULE COMPATIBILITY
@@ -15,46 +16,7 @@ from plynet import *
 from plynet.mechanic  import *
 from plynet.numeric   import *
 
-#========================================================================================
-#		PLANETARY SYSTEM CLASS
-#========================================================================================
-class planetary_system(object):
-    """Planetary system
-    
-    Attributes:
-    ----------
-    Mstar: double
-       Mass of star.  Default 1.0.  Units solar masses.
-       
-    Lstar: double
-       Luminosity of star.  Default 1.0.  Units solar luminosity
-       
-    Z: double
-       Solar nebula metallicity.  Default 0.005.  Adimensional
 
-    Methods:
-    -------
-    None
-
-    Examples:
-    --------
-    >> planetary_system()
-    >> planetary_system(Mstar=1.2)
-    """
-
-    #************************************************************************************
-    #	ATTRIBUTES
-    #************************************************************************************
-    Mstar='float(1.0)'
-    Lstar='float(1.0)'
-    Z='float(0.005)'
-
-    #************************************************************************************
-    #	METHODS
-    #************************************************************************************
-    def __init__(self,**kwargs):
-        updatedic(self.__dict__,planetary_system.__dict__,**kwargs)
-                
 #========================================================================================
 #		PLANET CLASS
 #========================================================================================
@@ -163,6 +125,8 @@ class planet(object):
     #Save function#......................................................................
     def save(self,**kwargs):
         """Save planet information
+
+	@brief A function to save all physical profiles of the planet interior
 
         Parameters:
         ----------
@@ -497,7 +461,6 @@ class planet(object):
 #========================================================================================
 #		TEST MODULE
 #========================================================================================
-
 def test_planet_init():
     #Simple definition
     p=planet(name='simple1')

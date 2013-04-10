@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+#########################################################################################
 #	PACKAGE INITIALIZATION
-#oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-
+#########################################################################################
+'''
+Plynet documentation
+'''
 #========================================================================================
 #		IMPORTS
 #========================================================================================

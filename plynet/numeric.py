@@ -1,8 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+#########################################################################################
 #	NUMERIC MODULE
-#oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+#########################################################################################
+"""@package Numeric
+Documentation for this module.
+
+More details.
+"""
 
 #========================================================================================
 #		IMPORTS
@@ -22,7 +27,7 @@ confnum=loadconf("numericrc")
 #		ROUTINES
 #========================================================================================
 def odestep(odesys,Yini,t,h,**kwargs):
-    """Compute one step of integration for odesys system, in time t
+    """@brief Compute one step of integration for odesys system, in time t
 
     Parameters:
     ----------
@@ -43,7 +48,6 @@ def odestep(odesys,Yini,t,h,**kwargs):
     >> def df(x,t): return 2*x
     >> #Return function f value in x=1.1
     >> f=num.odestep(df,1,1,0.1)
-
     """
 
     #Odeint scheme
