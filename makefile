@@ -1,5 +1,5 @@
 #########################################################################################
-# PLYNET, https://github.com/sbustamante/Plynet/archive/master.zip
+# PLYNET
 #########################################################################################
 #
 # Copyright (C) 2013 S. Bustamante, Jorge I. Zuluaga
