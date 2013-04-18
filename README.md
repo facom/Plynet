@@ -3,17 +3,17 @@ PLYNET 1.0-release
 **Python Planetary Physics Package**
 
 1.  [DESCRIPTION]
-    (https://github.com/sbustamante/Plynet/tree/1.0-release#description)
+    (https://github.com/facom/Plynet/tree/1.0-release#description)
 2.  [USER VERSION (Read-Only version)]
-    (https://github.com/sbustamante/Plynet/tree/1.0-release#user-version-read-only-version)
+    (https://github.com/facom/Plynet/tree/1.0-release#user-version-read-only-version)
 3.  [DEVELOPER VERSION (Read-Write version)]
-    (https://github.com/sbustamante/Plynet/tree/1.0-release#developer-version-read-write-version)
+    (https://github.com/facom/Plynet/tree/1.0-release#developer-version-read-write-version)
 4.  [PACKAGE INSTALLATION]
-    (https://github.com/sbustamante/Plynet/tree/1.0-release#package-installation)
+    (https://github.com/facom/Plynet/tree/1.0-release#package-installation)
 5.  [VERSION HISTORY]
-    (https://github.com/sbustamante/Plynet/tree/1.0-release#version-history)
+    (https://github.com/facom/Plynet/tree/1.0-release#version-history)
 6.  [LICENSE]
-    (https://github.com/sbustamante/Plynet/tree/1.0-release#license)
+    (https://github.com/facom/Plynet/tree/1.0-release#license)
 
 
 DESCRIPTION:
@@ -29,7 +29,7 @@ existing codes.
 USER VERSION (Read-Only version):
 -----------------------------------------------------------------------------------------
 Download the zip file of Plynet in GitHub from 
-[here.](https://github.com/sbustamante/Plynet/archive/1.0-release.zip)
+[here.](https://github.com/facom/Plynet/archive/1.0-release.zip)
 
 
 DEVELOPER VERSION (Read-Write version):
@@ -48,7 +48,7 @@ you can get a read-write version of *Plynet*
 
 3.  Link with the github proyect
 
-        $ git remote add origin git@github.com:sbustamante/Plynet.git
+        $ git remote add origin git@github.com:facom/Plynet.git
 
 4.  Pull the proyect in your local copy
 
