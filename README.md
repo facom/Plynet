@@ -34,7 +34,7 @@ Download the zip file of Plynet in GitHub from
 
 DEVELOPER VERSION (Read-Write version):
 -----------------------------------------------------------------------------------------
-Plynet is a open source code, thus you can contribuite with us. With the next steps 
+Plynet is a open source code, thus you can contribute with us. With the next steps 
 you can get a read-write version of *Plynet*
 
 
@@ -54,9 +54,9 @@ you can get a read-write version of *Plynet*
 
         $ git pull
 
-5.  Finally, link with 'master' branch
+5.  Finally, link with '1.0-release' branch
 
-        $ git push -u origin master
+        $ git push -u origin 1.0-release
 
     *Before this step, the user must request to macsebas33@gmail.com to be
     added as collaborator of Plynet. It's also necessary create a personal ssh 
@@ -67,7 +67,10 @@ you can get a read-write version of *Plynet*
 
         $ git add <files>
         $ git commit -m 'commit message'
-        $ git push -u origin master
+        $ git push -u origin 1.0-release
+
+
+You also can contribute to master branch corresponding to last version of Plynet.
 
 
 PACKAGE INSTALLATION:
