@@ -36,7 +36,7 @@ gendist:
 	$(PYTHON) setup.py sdist
 
 edit:
-	$(EDITOR) plynet/*.py plynet/conf/*rc.py 
+	$(EDITOR) plynet/*.py plynet/conf/*rc.py &
 
 clean:	
 	find . -name *~ -exec rm -rf {} \;
