@@ -23,26 +23,33 @@ from plynet.numeric   import *
 class planet(object):
     """Planet class
     
+    Class of rocky planets
+    
     Attributes
     ----------
-    name: string
-    Planet name. Default 'planet'
+    name : string
+      Planet name. Default 'planet'.
     
-    R: double
-    Planet Radius. Default 1.0, Units Earth Radius.
+    R : double
+      Planet Radius. Default 1.0, Units Earth Radius.
 
-    M: double
-    Planet Mass. Default 1.0, Units Earth Mass.
+    M : double
+      Planet Mass. Default 1.0, Units Earth Mass.
 
-    comp: list
-    Different planet shells from surface to nucleus with its composition, equation of state, and mass fraction
-    Default [{'comp':'Fe','MF':0.4,'RL':0.0,'EOS':'BM3'},{'comp':'pv_fmw','MF':0.6,'RL':0.0,'EOS':'BM3'}]
+    comp : list
+      Different planet shells from surface to nucleus with its composition, equation of 
+      state, and mass fraction. 
+      Default 
+      [{'comp':'Fe',    'MF':0.4,'Rini':0.0, 'Rend':0.33,'EOS':'Vinet','criterion':'-'},
+      {'comp':'pv_fmw','MF':0.6,'Rini':0.33,'Rend':1.0, 'EOS':'Vinet','criterion':'Radius'}]
     
-    urvec: list
-    List with radius where the propierties will be evaluated. Default np.linspace(0.,1.,100) adimensional
+    urvec : list
+      List with radius where the propierties will be evaluated.
+      Default np.linspace(0.,1.,100) adimensional
     
-    Tvec: list
-    List with initial temperature profile, according to urvec. Default np.linspace(6000,300,100) K
+    Tvec : list
+      List with initial temperature profile, according to urvec. 
+      Default np.linspace(6000,300,100) K
     
     """
     #************************************************************************************
@@ -53,10 +60,6 @@ class planet(object):
     state="int(0)"
     M = '1.0'
     R = '1.0'
-    
-    #Environmental properties
-    a="float(1.0)"#AU
-    environment="None"
     
     #Internal vectors (with boundary conditions)
     urvec="[0.,1.]"		#Adimensional points for values evaluate
@@ -92,11 +95,7 @@ class planet(object):
     def __init__(self,**kwargs):
 	#Set attributes using: default and argument values
         updatedic(self.__dict__,planet.__dict__,**kwargs)
-        
-	#Set planet environment
-        if self.environment is None:
-            self.environment=planetary_system()
-            
+                    
 	#Set global properties
         if self.M is None:
             self.M=self.mrvec[-1]
@@ -126,7 +125,7 @@ class planet(object):
     def save(self,**kwargs):
         """Save planet information
 
-	@brief A function to save all physical profiles of the planet interior
+	A function to save all physical profiles of the planet interior
 
         Parameters:
         ----------

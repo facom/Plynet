@@ -3,11 +3,7 @@
 #########################################################################################
 #	NUMERIC MODULE
 #########################################################################################
-"""@package Numeric
-Documentation for this module.
 
-More details.
-"""
 
 #========================================================================================
 #		IMPORTS
@@ -17,39 +13,40 @@ from plynet import *
 #========================================================================================
 #		MODULE CONFIGURATION
 #========================================================================================
+##Configuration parameters of numeric module
 confnum=loadconf("numericrc")
-
-#========================================================================================
-#		MODULE COMPATIBILITY
-#========================================================================================
 
 #========================================================================================
 #		ROUTINES
 #========================================================================================
 def odestep(odesys,Yini,t,h,**kwargs):
-    """@brief Compute one step of integration for odesys system, in time t
+    """Compute one step of integration for odesys system, in time t
 
-    Parameters:
-    ----------
-    odesys: differential equations of dynamics system
-    Yini: system state in time t
-    t: actual time of integration
-    h: predeterminate time step
-    kwargs: extra arguments
+    Parameters:\n
+    -------------------------------------------------------------------------------------\n
+    odesys : function\n
+	Differential equations of dynamics system\n
+    Yini : array\n
+	System state in time t\n
+    t : float\n
+	Current time of integration\n
+    h : float\n
+	Predeterminate time step\n
+    kwargs : --\n
+	Extra arguments\n
 	    
-    Returns:
-    -------
-    Y: system state in time t + h
+    Returns:\n
+    -------------------------------------------------------------------------------------\n
+    Y : array\n
+	System state in time t + h
        
-    Examples:
-    --------
-    >> import plynet.numeric as num
-    >> #Integration of f'(x)=2x
-    >> def df(x,t): return 2*x
-    >> #Return function f value in x=1.1
-    >> f=num.odestep(df,1,1,0.1)
+    Examples:\n
+    -------------------------------------------------------------------------------------\n
+    >> import plynet.numeric as num\n
+    >> def df(x,t): return 2*x\n
+    >> f=num.odestep(df,1,1,0.1)\n
+    
     """
-
     #Odeint scheme
     Tint=[t,t+h]
     if confnum.scheme=='odeint':
