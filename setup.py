@@ -13,9 +13,9 @@ from distutils.extension import Extension
 #SETUP
 #========================================================================================
 setup(
-    name		=	'Plynet', 
+    name		=	'plynet', 
     version		=	'1.0',
-    packages		=	['plynet'],
+    packages		=	['plynet','plynet.conf'],
     author		=	"Sebastian Bustamante, Jorge Zuluaga",
     author_email	=	"macsebas33@gmail.com",
     maintainer		=	"Sebastian Bustamante, Jorge Zuluaga",
