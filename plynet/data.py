@@ -300,10 +300,10 @@ class planet(object):
 	>> planet().make_phi()
 
         """
-	phi1 = lambda r:-4*np.pi*mechanic.confmech.G*(self.R*mechanic.confmech.R_SI)**2*\
+	phi1 = lambda r:-4*np.pi*confmech.G*(self.R*confmech.R_SI)**2*\
 	integ.quad( lambda r1:( self.rho(r1)*r1 ), r, 1.0, full_output = 1 )[0]
 
-	phi2 = lambda r:-4*np.pi*mechanic.confmech.G*(self.R*mechanic.confmech.R_SI)**2*\
+	phi2 = lambda r:-4*np.pi*confmech.G*(self.R*confmech.R_SI)**2*\
 	1/r*integ.quad( lambda r1:( self.rho(r1)*r1**2 ), 0, r, full_output = 1 )[0]
 
 	self.phivec=[]
