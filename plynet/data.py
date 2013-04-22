@@ -191,13 +191,16 @@ class planet(object):
 
 
     #Strcuture function#.................................................................
-    def structure(self,R=None,mphi = False):
+    def structure(self, update="radius", mphi=False):
         """Internal calculations of planet structure
 
         Parameters:
         ----------
-        R: radius of planet
-            Guess of radius of planet. Default planet.R
+	update: string ("mass" or "radius")
+	    Property to be updated, planet mass or radius. Default "radius"
+
+	mphi: boolean
+	    Switch to calculate the gravitational potencial inside the planet. Default False.
 
         Returns:
         -------
@@ -211,53 +214,71 @@ class planet(object):
         >>> print planet().urvec, planet().Tvec, planet().mrvec
 
         """
-	#Guess Radius
+        #Guess Radius and Mass
         R_tmp = self.R
-        if R!=None:
-            R_tmp = R
-
+        M_tmp = self.M
+        
 	#Increment for n-section optimization code
-	increment = R_tmp/confnum.n_section**2
+	increment_R = R_tmp/confnum.n_section**2
+	increment_M = M_tmp/confnum.n_section
 	#R_min of integration
 	r_min = confnum.r_min_int
 	#Reset of temperature
 	self.resetinterp('T')
 	
 	i = 0
-	#Loop residual mass condition
+	#Loop residual mass/radius condition
 	while True:
 	    #Integration of eoe
-	    self, signal = strprofile(self, R=R_tmp)
+	    self, signal = strprofile(self, R=R_tmp, M=M_tmp)
 	    
 	    no_mrc = False
 	    if i > confnum.n_max_mr:
 		no_mrc = True
 
 	    #residual mass approximatte (adimensional)
-	    m_res = abs(4*np.pi*self.rho(r_min)*(r_min*self.R*confmech.R_SI)**3\
-	    /(3*self.M*confmech.M_SI))
-	    mr_error = abs(m_res-self.mr(r_min)/self.M)
-	    print R_tmp , mr_error
+	    m_res = abs(4*np.pi*self.rho(r_min)*(r_min*R_tmp*confmech.R_SI)**3\
+	    /(3*M_tmp*confmech.M_SI))
+	    mr_error = abs(m_res-self.mr(r_min)/M_tmp)
+
+	    #Printing results in screen
+	    sys.stdout.write("Mechanical Structure:\tIteration %d\tMp = %1.8e ME\tRp = %1.8e RE\t Mass Error = %1.8e\r" % 
+	    (i,M_tmp, R_tmp , mr_error))
+	    sys.stdout.flush()
+	    
 	    #criterion of residual mass convergence
 	    if( signal == False and mr_error <= confnum.accuracy_mr ) or no_mrc:
 				
 		if no_mrc:
-		    print 'WARNING: Maxim number of step achieved in residual mass'
-		    print ' condition.\n  Last residual error was %f'%mr_error
+		    print 'WARNING: Maxim number of step achieved in residual mass condition.\n'
+		    print '\tLast residual error was %f'%mr_error
 		    
-		self.R = R_tmp
+		if update == "radius":
+		    self.R = R_tmp
+		else:
+		    self.M = M_tmp
 		break
 		
 	    #Mass Convergence Algoritm (general bisection)
 	    if signal:
-		R_tmp -= increment
-		increment *= 1./confnum.n_section
-		R_tmp += increment
-		temp_signal = False
+		if update == "radius":
+		    R_tmp -= increment_R
+		    increment_R *= 1./confnum.n_section
+		    R_tmp += increment_R
+		else:
+		    M_tmp += increment_M
 	    else:
-		R_tmp += increment
-		temp_signal = False
+		if update == "radius":
+		    R_tmp += increment_R
+		else:
+		    M_tmp -= increment_M
+		    increment_M *= 1./confnum.n_section
+		    M_tmp += increment_M
+
+	    #Updating Mass planet
+	    #self.M = M_tmp
 	    i += 1
+	    
 	if mphi == True:
 	    self.make_phi()
         return self

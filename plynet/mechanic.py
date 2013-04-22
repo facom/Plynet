@@ -158,17 +158,17 @@ def EOE(Y,r,**kwargs):
 #****************************************************************************************
 #	Integator of structure for a given planet radius 
 #****************************************************************************************
-def strprofile(p, R = 1.0):
+def strprofile(p, R = 1.0, M = 1.0):
     signal = False
     
     #Constants of normalization
-    g = confmech.G*p.M*confmech.M_SI/(R*confmech.R_SI)**2
+    g = confmech.G*M*confmech.M_SI/(R*confmech.R_SI)**2
     p.norm = {\
-    'M':1.0*p.mr(1.0), 'rho':1.0*p.rho(1.0),\
+    'M':1.0*M, 'rho':1.0*p.rho(1.0),\
     'P':confmech.P_SI, 'g':g, 'R':1.0*R }
 
     #Initial conditions (adimensional)
-    Y = np.array([ p.mr(1.0)/p.norm['M'], p.rho(1.0)/p.norm['rho'],\
+    Y = np.array([ 1.0, p.rho(1.0)/p.norm['rho'],\
     g/p.norm['g'], p.P(1.0)/p.norm['P']])
 
     i = 1
@@ -177,14 +177,19 @@ def strprofile(p, R = 1.0):
     p.comp[-1]['RL'] = 1.0       #radius of last layer
     Nh = int(1./confnum.h_step)	 #number of steps
     
+    #updating planet mass
+    p.M = M
+    p.mrvec = p.mr(p.urvec)
+    p.mrvec *= p.M/p.mrvec[-1]
+    p.resetinterp(['mr'])
     #reset of properties
     urvec = np.linspace(0.0, 1.0, Nh)
-    p.mrvec = p.mr(urvec)
     p.rhovec = p.rho(urvec)
     p.Pvec = p.P(urvec)
     p.gvec = p.g(urvec)
+    p.mrvec = p.mr(urvec)
     Mprev = 0
-
+    
     #Integration (adimensional)
     for r in urvec[::-1]:
         p.mrvec[-i]  = Y[0]*p.norm['M']
@@ -193,8 +198,9 @@ def strprofile(p, R = 1.0):
 	p.Pvec[-i]   = Y[3]*p.norm['P']
 
         #Errors in mass integration (signal)
-        if p.mrvec[-i]<0 or p.mrvec[-i]>p.M or \
-        np.isnan(abs(p.mrvec[-i])) or np.isinf(abs(p.mrvec[-i])):
+        if p.mrvec[-i]<0 or p.mrvec[-i]>M or \
+        np.isnan(abs(p.mrvec[-i])) or np.isinf(abs(p.mrvec[-i])) or\
+        ( p.mrvec[-i] == 0.0 and i<Nh ):
 	    signal = True
 	    #Reset of properties
 	    urvec = p.urvec
