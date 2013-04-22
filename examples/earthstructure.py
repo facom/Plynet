@@ -22,7 +22,7 @@ import plynet as ply
 #Integration Scheme
 ply.numeric.confnum.scheme = 'rk4'
 #Integratio step
-ply.numeric.confnum.h_step = 1./1000
+ply.numeric.confnum.h_step = 1./950
 
 #Error in residual mass condition
 ply.numeric.confnum.accuracy_mr = 1e-10
@@ -57,9 +57,9 @@ earth_prem.load( filename = 'prem', fmt=['ur','-','rho','P','g','mr'] )
 #		INTEGRATION OF THE EARTH INTERIOR
 #========================================================================================
 #If you want to update the planet radius after the integration
-earth.structure( update = 'radius' )
+#earth.structure( update = 'radius' )
 #If you want to update the planet mass after the integration
-#earth.structure( update = 'mass' )
+earth.structure( update = 'mass' )
 
    
 #========================================================================================
