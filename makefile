@@ -38,10 +38,9 @@ gendist:
 edit:
 	$(EDITOR) plynet/*.py plynet/conf/*rc.py &
 
-clean:	
+clean:
 	find . -name *~ -exec rm -rf {} \;
 	make -C plynet clean
-	make -C examples clean
 
 cleanall:clean
 	rm -rf build
