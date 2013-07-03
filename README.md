@@ -121,4 +121,4 @@ not an online version is available [here.](http://www.opensource.org/licenses/af
 -----------------------------------------------------------------------------------------
 **Instituto de Fisica - FCEN - Universidad de Antioquia (C) 2013**
 
-Sebastian Bustamante (macsebas33@gmail.com), Jorge Zuluaga
+Sebastian Bustamante (macsebas33@gmail.com), Jorge Zuluaga (zuluagajorge@gmail.com)
