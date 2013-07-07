@@ -78,9 +78,9 @@ PACKAGE INSTALLATION:
 Once you had get a (user or developer) copy of Plynet, to install it perform the 
 following operations:
 
-1.  Create the directory usr/local in your home directory:
+1.  Create the directory usr/ in your home directory:
    
-        $ mkdir -p $HOME/usr/local
+        $ mkdir -p $HOME/usr/
 
 2.  Add the following line to your .bashrc:
 
