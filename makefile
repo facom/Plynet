@@ -18,7 +18,7 @@
 #########################################################################################
 PACKAGE		=	Plynet
 VERSION		=	1.0-release
-PYTHON 		=	python2.6 
+PYTHON 		=	python2.7
 INSTALL_DIR	=	$(HOME)/usr
 PACKAGE_DIR	=	$(INSTALL_DIR)/lib/$(PYTHON)/site-packages/$(PACKAGE)
 TEST_CMD	=	nosetests $(TEST_OPT) --with-doctest --doctest-tests
